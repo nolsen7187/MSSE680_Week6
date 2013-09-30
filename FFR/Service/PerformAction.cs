@@ -50,7 +50,9 @@ namespace Service
                         Repo.Update(InstatiateCallerRequested.item);
                         break;
                     case 3://Delete
-                        Repo.Delete(InstatiateCallerRequested.item);
+                        var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
+                        Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 3 select d).Single();
+                        deleteItemRepo.Delete(deleteItem);
                         break;
                     default:
                         break;

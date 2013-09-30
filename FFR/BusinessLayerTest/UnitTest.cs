@@ -151,6 +151,29 @@ namespace BusinessLayerTest
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
             newFacade.RegisterCustomer();
         }
+        [TestMethod]
+        public void BusinessLayerDeleteItemUsingXML()
+        {
+            XmlWriterSettings xmlSetting = new XmlWriterSettings();
+            xmlSetting.Indent = true;
+
+            string xmlFileName = "ItemTest.xml";
+            XmlWriter xmlWriter = XmlWriter.Create(xmlFileName, xmlSetting);
+
+            xmlWriter.WriteStartDocument();
+            xmlWriter.WriteComment("This Xml is generated when a new Item is added on FFR's site");
+            xmlWriter.WriteStartElement("Item");
+            xmlWriter.WriteElementString("ObjectType", "Item");
+            xmlWriter.WriteElementString("ActionType", "3");
+            xmlWriter.WriteEndElement();
+            xmlWriter.WriteEndDocument();
+
+            xmlWriter.Flush();
+            xmlWriter.Close();
+
+            Facade newFacade = new Facade(xmlWriter, xmlFileName);
+            newFacade.RegisterCustomer();
+        }
 
     }
 }
