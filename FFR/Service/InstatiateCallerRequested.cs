@@ -15,10 +15,15 @@ namespace Service
         public static SalesHeader salesHeader;
         public static SalesItem salesItem;
         public static Employee employee;
-        public static bool custRequested = false, itemRequested, salesHeaderRequested, salesItemRequested, employeeRequested;
 
         public void InstantiateCallerRequested(XmlWriter localXmlWriter, string xmlFileName)
         {
+            customer = null; 
+            item = null;
+            salesHeader= null; 
+            salesItem = null; 
+            employee = null;
+
             XmlReader xmlReader = XmlReader.Create(xmlFileName);
             while (xmlReader.Read())
             {
@@ -26,35 +31,30 @@ namespace Service
                     && xmlReader.Name == "Customer")
                 {
                     customer = Activator.CreateInstance<Customer>();
-                    custRequested = true;
                     break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "Item")
                 {
                     item = Activator.CreateInstance<Item>();
-                    itemRequested = true;
                     break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "SalesHeader")
                 {
                     salesHeader = Activator.CreateInstance<SalesHeader>();
-                    salesHeaderRequested = true;
                     break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "SalesItem")
                 {
                     salesItem = Activator.CreateInstance<SalesItem>();
-                    salesItemRequested = true;
                     break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "Employee")
                 {
                     employee = Activator.CreateInstance<Employee>();
-                    employeeRequested = true;
                     break;
                 }
                 //throw Exception("No Caller Requested found in XML");

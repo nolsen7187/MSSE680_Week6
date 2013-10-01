@@ -18,7 +18,7 @@ namespace Service
 
         public void setdata(XmlWriter localXmlWriter, string xmlFileName)
         {
-            if (InstatiateCallerRequested.custRequested)
+            if (InstatiateCallerRequested.customer != null)
             {
                 foreach (PropertyInfo propertyInfo in typeof(Customer).GetProperties())
                 {
@@ -74,7 +74,7 @@ namespace Service
                     xmlReader.Close();
                 }
             }
-            else if (InstatiateCallerRequested.itemRequested)
+            else if (InstatiateCallerRequested.item != null)
             {
                 foreach (PropertyInfo propertyInfo in typeof(Item).GetProperties())
                 {
@@ -116,7 +116,7 @@ namespace Service
                     xmlReader.Close();
                 }
             }
-            else if (InstatiateCallerRequested.salesHeaderRequested)
+            else if (InstatiateCallerRequested.salesHeader != null)
             {
                 foreach (PropertyInfo propertyInfo in typeof(SalesHeader).GetProperties())
                 {
@@ -157,7 +157,7 @@ namespace Service
                     xmlReader.Close();
                 }
             }
-            else if (InstatiateCallerRequested.salesItemRequested)
+            else if (InstatiateCallerRequested.salesItem != null)
             {
                 foreach (PropertyInfo propertyInfo in typeof(SalesItem).GetProperties())
                 {
@@ -201,7 +201,7 @@ namespace Service
                     xmlReader.Close();
                 }
             }
-            else if (InstatiateCallerRequested.employeeRequested)
+            else if (InstatiateCallerRequested.employee != null)
             {
                 foreach (PropertyInfo propertyInfo in typeof(Employee).GetProperties())
                 {

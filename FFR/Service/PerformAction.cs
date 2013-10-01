@@ -18,9 +18,9 @@ namespace Service
         {
             getActionType(localXmlWriter, xmlFileName);
 
-            if (InstatiateCallerRequested.custRequested)
+            if (InstatiateCallerRequested.customer != null)
             {
-                InstatiateCallerRequested.custRequested = false;//Initializing Value after run to prevent repeat for multiple unit tests
+
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
                 switch (actionType)
                 {
@@ -37,14 +37,14 @@ namespace Service
                         break;
                 }
             }
-            else if (InstatiateCallerRequested.itemRequested)
+            else if (InstatiateCallerRequested.item != null)
             {
-                InstatiateCallerRequested.itemRequested = false;//Initializing Value after run to prevent repeat for multiple unit tests
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Item>();
                 switch (actionType)
                 {
                     case 1://Create
                         Repo.Create(InstatiateCallerRequested.item);
+
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.item);
@@ -58,9 +58,8 @@ namespace Service
                         break;
                 }
             }
-            else if (InstatiateCallerRequested.salesHeaderRequested)
+            else if (InstatiateCallerRequested.salesHeader != null)
             {
-                InstatiateCallerRequested.salesHeaderRequested = false;//Initializing Value after run to prevent repeat for multiple unit tests
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesHeader>();
                 switch (actionType)
                 {
@@ -77,9 +76,8 @@ namespace Service
                         break;
                 }
             }
-            else if (InstatiateCallerRequested.salesItemRequested)
+            else if (InstatiateCallerRequested.salesItem != null)
             {
-                InstatiateCallerRequested.salesItemRequested = false;//Initializing Value after run to prevent repeat for multiple unit tests
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesItem>();
                 switch (actionType)
                 {
@@ -96,9 +94,8 @@ namespace Service
                         break;
                 }
             }
-            else if (InstatiateCallerRequested.employeeRequested)
+            else if (InstatiateCallerRequested.employee != null)
             {
-                InstatiateCallerRequested.employeeRequested = false;//Initializing Value after run to prevent repeat for multiple unit tests
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Employee>();
                 switch (actionType)
                 {
