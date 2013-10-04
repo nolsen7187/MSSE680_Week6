@@ -8,12 +8,12 @@
 //------------------------------------------------------------------------------
 using DAL;
 using System.Data.Entity;
+using System.Web;
+using System;
+using System.Collections.Generic;
 
-namespace DAL
+namespace Presentation.Models
 {
-    using System;
-    using System.Collections.Generic;
-
     public partial class Customer
     {
         public Customer()
