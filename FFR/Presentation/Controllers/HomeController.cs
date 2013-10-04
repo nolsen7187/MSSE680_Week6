@@ -10,7 +10,7 @@ namespace Presentation.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            ViewBag.Message = "Finish Flash Racing";
 
             return View();
         }

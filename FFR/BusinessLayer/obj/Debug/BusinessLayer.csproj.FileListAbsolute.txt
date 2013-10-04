@@ -20,3 +20,4 @@ C:\Users\nolsen\Source\Repos\MSSE680_Week6\FFR\BusinessLayer\bin\Debug\EntityFra
 C:\Users\nolsen\Source\Repos\MSSE680_Week6\FFR\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\nolsen\Source\Repos\MSSE680_Week6\FFR\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\nolsen\Source\Repos\MSSE680_Week6\FFR\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\BusinessLayer\bin\Debug\EntityFramework.dll
