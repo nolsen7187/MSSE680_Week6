@@ -33,6 +33,7 @@ namespace Service
                                 && xmlReader.NodeType != XmlNodeType.EndElement
                                 && xmlReader.Value != "\n")
                             {
+                                //Want to spin dynamically.
                                 switch (propertyInfo.Name)
                                 {
                                     case "CustomerId":
