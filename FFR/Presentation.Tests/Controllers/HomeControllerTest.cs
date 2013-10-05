@@ -9,7 +9,7 @@ using Presentation.Controllers;
 
 namespace Presentation.Tests.Controllers
 {
-    [TestClass]
+    /*[TestClass]
     public class HomeControllerTest
     {
         [TestMethod]
@@ -50,5 +50,5 @@ namespace Presentation.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
-    }
+    }*/
 }

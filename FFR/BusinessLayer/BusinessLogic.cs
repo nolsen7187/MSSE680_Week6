@@ -28,7 +28,7 @@ namespace BusinessLayer
             this.localxmlFileName = xmlFileName;
         }
 
-        public void RegisterCustomer()
+        public void ProcessRequest()
         {
             instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter, localxmlFileName);
             handleData.setdata(localXmlWriter, localxmlFileName);

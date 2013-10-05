@@ -37,7 +37,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
             xmlWriter.Dispose();
             xmlFileName = "";
         }
@@ -66,7 +66,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
         }
         [TestMethod]
         public void BusinessLayerCreateSalesHeaderUsingXML()
@@ -93,7 +93,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
         }
         [TestMethod]
         public void BusinessLayerCreateSalesItemUsingXML()
@@ -122,7 +122,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
         }
         [TestMethod]
         public void BusinessLayerRegisterNewEmployeeUsingXML()
@@ -149,7 +149,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
         }
         [TestMethod]
         public void BusinessLayerDeleteItemUsingXML()
@@ -172,7 +172,7 @@ namespace BusinessLayerTest
             xmlWriter.Close();
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
-            newFacade.RegisterCustomer();
+            newFacade.ProcessRequest();
         }
 
     }

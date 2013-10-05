@@ -15,7 +15,7 @@ namespace FFR_Test
     public class UnitTest1
     {
         //test again 123
-        /*[TestMethod]
+        [TestMethod]
         public void AddCustomerandSaleHeader()
         {
             FFREntities ffrDb = new FFREntities();
@@ -54,7 +54,7 @@ namespace FFR_Test
 
             Assert.AreEqual(savedCustomer.CustomerId, 2);
         }
-/*        [TestMethod]
+        [TestMethod]
         public void DeleteSalesHeader()
         {
             FFREntities ffrDb = new FFREntities();
@@ -87,7 +87,7 @@ namespace FFR_Test
             ffrDb.SalesHeaders.Add(salesHeader);
             ffrDb.SaveChanges();
 
-            SalesHeader updateSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesId == 3 select d).Single();
+            SalesHeader updateSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesStatus == "Update" select d).Single();
             updateSalesHeader.SalesStatus = "Record has been updated!";
             ffrDb.SaveChanges();
         }
@@ -107,8 +107,8 @@ namespace FFR_Test
             createCustomer.Email = "jolsen@hotmail.com";
 
             customerRepo.Create(createCustomer);
-        }*/
-        /*
+        }
+        
         [TestMethod]
         public void CreateItemUsingRepository()
         {
@@ -127,7 +127,6 @@ namespace FFR_Test
             var SalesHeaderRepo = new DataRepository<SalesHeader>();
 
             SalesHeader createSalesHeader = new SalesHeader();
-            createSalesHeader.CustomerId = 0;
             createSalesHeader.OrderSalesBalance = 800;
             createSalesHeader.OrderTaxAmount = 100;
             createSalesHeader.OrderTotal = 900;
@@ -140,10 +139,11 @@ namespace FFR_Test
             var SalesItemRepo = new DataRepository<SalesItem>();
 
             SalesItem createSalesItem = new SalesItem();
-            createSalesItem.ItemId = 0;
             createSalesItem.ItemName = "FP Green Turbo";
             createSalesItem.Price = 800;
             createSalesItem.Qty = 1;
+            createSalesItem.ItemId = 1;
+            createSalesItem.SalesId = 1;
             createSalesItem.LineAmount = 800;
 
             SalesItemRepo.Create(createSalesItem);
@@ -158,18 +158,6 @@ namespace FFR_Test
             Assert.IsTrue(customerList.Count > 0);
         }
         //Update an Item in the FFR db Context
-        [TestMethod]
-        public void UpdateItemUsingRepository()
-        {
-            var itemRepo = new DataRepository<Item>();
-
-            Item updateItem = new Item();
-            updateItem.ItemId = 0;
-            updateItem.Price = 1000;
-            updateItem.ItemCost = 450;
-
-            itemRepo.Update(updateItem);
-        }
         //Update an Item in the FFR db Context
         [TestMethod]
         public void DeleteItemUsingRepository()
@@ -202,6 +190,6 @@ namespace FFR_Test
             //deleteItem.ItemId = 2;
             deleteItemRepo.Delete(deleteItem);
             deleteItemRepo.Dispose();
-        }*/
+        }
     }
 }

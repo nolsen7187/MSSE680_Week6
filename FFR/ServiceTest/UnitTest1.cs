@@ -103,7 +103,7 @@ namespace ServiceTest
             Int16 actionType = 2;
 
             Item createItem = Activator.CreateInstance<Item>();
-            createItem.ItemName = "FP Gray Turbo";
+            createItem.ItemName = "FP Delete";
             createItem.Price = 1200;
             createItem.ItemCost = 550;
 
@@ -112,7 +112,7 @@ namespace ServiceTest
             itemRepo.Create(createItem);
 
             var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
-            Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 3 select d).Single();
+            Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemName == "FP Delete" select d).Single();
 
             switch (actionType)
             {
