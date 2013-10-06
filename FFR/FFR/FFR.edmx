@@ -33,6 +33,7 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="Address" Type="varchar" MaxLength="200" />
           <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Street" Type="varchar" MaxLength="100" />
           <Property Name="State" Type="varchar" MaxLength="2" />
           <Property Name="Zip" Type="varchar" MaxLength="10" />
           <Property Name="Suite" Type="varchar" MaxLength="20" />
@@ -156,6 +157,7 @@
           <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="SalesHeaders" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="Customer" ToRole="SalesHeader" />
+          <Property Type="String" Name="Street" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SalesHeader">
           <Key>
@@ -250,7 +252,8 @@
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="IsTypeOf(FFRModel.Customer)">
         <MappingFragment StoreEntitySet="Customers">
-          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Address" ColumnName="Address" />

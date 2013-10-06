@@ -56,6 +56,7 @@ CREATE TABLE [dbo].[Customers] (
     [LastName] varchar(50)  NULL,
     [Address] varchar(200)  NULL,
     [City] varchar(50)  NULL,
+	[Street] varchar(100) NULL,
     [State] varchar(2)  NULL,
     [Zip] varchar(10)  NULL,
     [Suite] varchar(20)  NULL,

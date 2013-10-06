@@ -29,6 +29,7 @@ namespace DAL
         public string Suite { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+        public string Street { get; set; }
     
         public virtual ICollection<SalesHeader> SalesHeaders { get; set; }
     }
