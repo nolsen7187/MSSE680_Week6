@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Service;
 using System.Collections;
 using System.Xml;
+using DAL;
 
 namespace BusinessLayer
 {
@@ -14,28 +15,22 @@ namespace BusinessLayer
         private InstatiateCallerRequested instatiateCallerRequested = new InstatiateCallerRequested();
         private HandleData handleData = new HandleData();
         private PerformAction performAction = new PerformAction();
-        //private string CallerRequested;
-        //private ArrayList DataList;
-        private XmlWriter localXmlWriter;
-        private string localxmlFileName = "";
+        private Customer lclClass;
+        private int lclActionType;
 
-        //public Facade(string CallerRequested, ArrayList DataList)
-        public Facade(XmlWriter xmlWriter, string xmlFileName)
+        public Facade(Customer Class, int ActionType)
         {
-            //this.CallerRequested = CallerRequested;
-            //this.DataList = DataList;
-            this.localXmlWriter = xmlWriter;
-            this.localxmlFileName = xmlFileName;
+            this.lclClass = Class;
+            this.lclActionType = ActionType;
         }
-
         public void ProcessRequest()
         {
-            instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter, localxmlFileName);
-            handleData.setdata(localXmlWriter, localxmlFileName);
-            performAction.Action(localXmlWriter, localxmlFileName);
+            //instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter, localxmlFileName);
+            //handleData.setdata(localXmlWriter, localxmlFileName);
+            performAction.Action(lclClass, lclActionType);
 
-            this.localXmlWriter.Dispose();
-            this.localxmlFileName = "";
+            //this.localXmlWriter.Dispose();
+            //this.localxmlFileName = "";
                 
         }
     }

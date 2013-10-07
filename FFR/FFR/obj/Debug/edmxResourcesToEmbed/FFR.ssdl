@@ -28,6 +28,7 @@
     <Property Name="LastName" Type="varchar" MaxLength="50" />
     <Property Name="Address" Type="varchar" MaxLength="200" />
     <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Street" Type="varchar" MaxLength="100" />
     <Property Name="State" Type="varchar" MaxLength="2" />
     <Property Name="Zip" Type="varchar" MaxLength="10" />
     <Property Name="Suite" Type="varchar" MaxLength="20" />

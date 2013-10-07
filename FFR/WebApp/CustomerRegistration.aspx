@@ -1,72 +1,76 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterCustomer.aspx.cs" Inherits="WebApplication.RegisterCustomer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerRegistration.aspx.cs" Inherits="WebApp.CustomerRegistration" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <style type="text/css">
         .auto-style1
         {
-            width: 81px;
+            width: 153px;
+        }
+        .auto-style2
+        {
+            width: 394px;
         }
     </style>
 </head>
 <body style="height: 497px">
     <form id="form1" runat="server">
     <div>
-        <table style="width: 32%; margin-right: 0px;">
+        <table style="width: 60%; margin-right: 0px;">
             <tr>
                 <td class="auto-style1">First Name:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="FirstNameTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Last Name:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="LastNameTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">City:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="CityTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">State:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="StateTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Street:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="StreetTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Suite:</td>
-                <td>
-                    <asp:TextBox ID="SuiteTextBox" runat="server" Width="275px"></asp:TextBox>
+                <td class="auto-style1">Zip:</td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="ZipTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Address:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="AddressTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Phone:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="PhoneTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Email:</td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="EmailTextBox" runat="server" Width="275px"></asp:TextBox>
                 </td>
             </tr>

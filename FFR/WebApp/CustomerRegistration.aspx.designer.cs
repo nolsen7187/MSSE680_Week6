@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication {
+namespace WebApp {
     
     
-    public partial class RegisterCustomer {
+    public partial class CustomerRegistration {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -67,13 +76,13 @@ namespace WebApplication {
         protected global::System.Web.UI.WebControls.TextBox StreetTextBox;
         
         /// <summary>
-        /// SuiteTextBox control.
+        /// ZipTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SuiteTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ZipTextBox;
         
         /// <summary>
         /// AddressTextBox control.

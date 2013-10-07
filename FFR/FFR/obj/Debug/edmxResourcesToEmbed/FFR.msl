@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="IsTypeOf(FFRModel.Customer)">
         <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Street" ColumnName="Street" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />

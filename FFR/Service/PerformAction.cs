@@ -13,19 +13,21 @@ namespace Service
     public class PerformAction
     {
         private static Int16 actionType;
+        public Customer localCust;
 
-        public bool Action(XmlWriter localXmlWriter, string xmlFileName)
+        public bool Action(Customer Class, int ActionType)
         {
-            getActionType(localXmlWriter, xmlFileName);
+            //getActionType(localXmlWriter, xmlFileName);
 
-            if (InstatiateCallerRequested.customer != null)
+            if (Class != null)
             {
-
+                localCust = Class;
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
-                switch (actionType)
+                switch (ActionType)
                 {
+                        
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.customer);
+                        Repo.Create(localCust);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.customer);
@@ -114,7 +116,7 @@ namespace Service
             }
             return false; ;
         }
-        public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
+        /*public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
         {
 
             XmlReader xmlReader = XmlReader.Create(xmlFileName);
@@ -129,7 +131,7 @@ namespace Service
                 }
             }
             xmlReader.Close();
-        }
+        }*/
     }
 
 }

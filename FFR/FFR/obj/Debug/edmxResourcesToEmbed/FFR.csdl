@@ -34,6 +34,7 @@
     <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="SalesHeaders" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="Customer" ToRole="SalesHeader" />
+    <Property Type="String" Name="Street" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="SalesHeader">
     <Key>

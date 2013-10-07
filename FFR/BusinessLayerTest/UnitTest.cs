@@ -9,7 +9,7 @@ namespace BusinessLayerTest
     [TestClass]
     public class UnitTest
     {
-        [TestMethod]
+       /* [TestMethod]
         public void BusinessLayerRegisterNewCustomerUsingXML()
         {
             XmlWriterSettings xmlSetting = new XmlWriterSettings();
@@ -173,7 +173,7 @@ namespace BusinessLayerTest
 
             Facade newFacade = new Facade(xmlWriter, xmlFileName);
             newFacade.ProcessRequest();
-        }
+        }*/
 
     }
 }
