@@ -14,7 +14,6 @@ namespace Service
     {
         private static Int16 actionType;
         public Customer localCust;
-
         public bool Action(Customer Class, int ActionType)
         {
             //getActionType(localXmlWriter, xmlFileName);
@@ -25,9 +24,34 @@ namespace Service
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
                 switch (ActionType)
                 {
-                        
+
                     case 1://Create
                         Repo.Create(localCust);
+                        break;
+                    case 2://Update
+                        Repo.Update(localCust);
+                        break;
+                    case 3://Delete
+                        Repo.Delete(localCust);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return true;
+        }
+
+        public bool Action(XmlWriter localXmlWriter, string xmlFileName)
+        {
+            getActionType(localXmlWriter, xmlFileName);
+
+            if (InstatiateCallerRequested.customer != null)
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
+                switch (actionType)
+                {
+                    case 1://Create
+                        Repo.Create(InstatiateCallerRequested.customer);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.customer);
@@ -116,7 +140,7 @@ namespace Service
             }
             return false; ;
         }
-        /*public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
+        public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
         {
 
             XmlReader xmlReader = XmlReader.Create(xmlFileName);
@@ -131,7 +155,7 @@ namespace Service
                 }
             }
             xmlReader.Close();
-        }*/
+        }
     }
 
 }
